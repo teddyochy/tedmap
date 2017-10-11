@@ -1,0 +1,584 @@
+﻿<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!-- <meta http-equiv="X-UA-Compatible" content="IE=10"> -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Teddy Ochieng">
+<meta name="generator" content="Mappetizer for ArcGIS 13.0.3 by uismedia (http://www.uismedia.de)">
+<meta name="date" content="9/17/2017 2:41:01 PM">
+<meta name="description" content="This is a Web Mapping solution created with Mappetizer for ArcGIS. ">
+<meta name="keywords" content="Mappetizer, uismedia, SVG, ArcGIS">
+<title>Blackspot Mapping</title>
+<link rel="stylesheet" href="./dojoroot/themes/flat/flat.css">
+<link rel="stylesheet" href="./dojoroot/dojox/layout/resources/FloatingPane.css">
+<link rel="stylesheet" href="./dojoroot/dojox/layout/resources/ResizeHandle.css">
+<link rel="stylesheet" href="./dojoroot/dojox/image/resources/Lightbox.css">
+<script src="./dojoroot/dojo/dojo.js" type="text/javascript" data-dojo-config="locale:'en', parseOnLoad: false"></script>
+<link rel = "stylesheet" href="./font-awesome/css/font-awesome.min.css">
+<link href ='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="embfiles/style.css">
+<script type="text/javascript">
+var GB_ROOT_DIR = "greybox/";
+</script>
+<link href="greybox/gb_styles.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="greybox/AJS.js"></script>
+<script type="text/javascript" src="greybox/AJS_fx.js"></script>
+<script type="text/javascript" src="greybox/gb_scripts.js"></script>
+<script src="embfiles/syslib.js" type="text/javascript"></script>
+<script src="embfiles/tools.js" type="text/javascript"></script>
+<script src="embfiles/table.js" type="text/javascript"></script>
+<script src="embfiles/variables.js" type="text/javascript" charset="UTF-8"></script>
+<script src="embfiles/selrecords.js" type="text/javascript"></script>
+<script src="embfiles/identify.js" type="text/javascript"></script>
+<script src="embfiles/query.js" type="text/javascript"></script>
+<script src="embfiles/webtools.js" type="text/javascript"></script>
+<script type="text/javascript"></script>
+
+</head>
+<body id="MVhtmlBody" class="flat" style="margin:0px;visibility:visible">
+<div id="MVpreloader">
+<section class="preloader">
+<p class="preloaderIn" style="font-size:1.5em;">Northern Corridor and Nairobi High Risk Roads Blackspot Mapping</p>
+<i class="preloaderIn fa fa-spinner fa-spin fa-4x fa-fw"></i>
+</section>
+</div>
+<div data-dojo-type="dojo.data.ItemFileReadStore" Data-dojo-id="th0Store" data-dojo-props="url:'./embfiles/th0_json.js'"></div>
+<div data-dojo-type="dojo.data.ItemFileReadStore" Data-dojo-id="th1Store" data-dojo-props="url:'./embfiles/th1_json.js'"></div>
+<div data-dojo-type="dojo.data.ItemFileReadStore" Data-dojo-id="th2Store" data-dojo-props="url:'./embfiles/th2_json.js'"></div>
+<div data-dojo-type="dojo.data.ItemFileReadStore" Data-dojo-id="th3Store" data-dojo-props="url:'./embfiles/th3_json.js'"></div>
+<div data-dojo-type="dojo.data.ItemFileReadStore" Data-dojo-id="th4Store" data-dojo-props="url:'./embfiles/th4_json.js'"></div>
+<div data-dojo-type="dojo.data.ItemFileReadStore" Data-dojo-id="th5Store" data-dojo-props="url:'./embfiles/th5_json.js'"></div>
+<div data-dojo-type="dojo.data.ItemFileReadStore" Data-dojo-id="th6Store" data-dojo-props="url:'./embfiles/th6_json.js'"></div>
+<div data-dojo-type="dojo.data.ItemFileReadStore" Data-dojo-id="th7Store" data-dojo-props="url:'./embfiles/th7_json.js'"></div>
+<div data-dojo-type="dojo.data.ItemFileReadStore" Data-dojo-id="th8Store" data-dojo-props="url:'./embfiles/th8_json.js'"></div>
+<div data-dojo-type="dojo.data.ItemFileReadStore" Data-dojo-id="th9Store" data-dojo-props="url:'./embfiles/th9_json.js'"></div>
+<div data-dojo-type="dojo.data.ItemFileReadStore" Data-dojo-id="th10Store" data-dojo-props="url:'./embfiles/th10_json.js'"></div>
+<div data-dojo-type="dojo.data.ItemFileReadStore" Data-dojo-id="th11Store" data-dojo-props="url:'./embfiles/th11_json.js'"></div>
+<div data-dojo-type="dojo.data.ItemFileReadStore" Data-dojo-id="th12Store" data-dojo-props="url:'./embfiles/th12_json.js'"></div>
+<div data-dojo-type="dojo.data.ItemFileReadStore" Data-dojo-id="th13Store" data-dojo-props="url:'./embfiles/th13_json.js'"></div>
+<div data-dojo-type="dojo.data.ItemFileReadStore" Data-dojo-id="th14Store" data-dojo-props="url:'./embfiles/th14_json.js'"></div>
+<div data-dojo-type="dojo.data.ItemFileReadStore" Data-dojo-id="th15Store" data-dojo-props="url:'./embfiles/th15_json.js'"></div>
+
+<!-- Design -->
+<div id="MVborderContainer" data-dojo-type="dijit/layout/BorderContainer" data-dojo-props="design:'headline', gutters:false">
+<div id="MVtitle" data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region:'top'">
+<h1>Northern Corridor and Nairobi High Risk Roads Blackspot Mapping</h1>
+</div>
+<div id="MVtabContainer" data-dojo-type="dijit/layout/AccordionContainer"  data-dojo-props="region:'right', tabStrip: false, persist:false, useMenu: false, splitter:true" >
+<div id="MVlegendContainer" data-dojo-type="dijit/layout/ContentPane" data-dojo-props="title:'Map Content'"></div>
+<div id="MVidentifyContainer" data-dojo-type="dijit/layout/ContentPane" data-dojo-props="title:'Details'">
+<div id="MVidentifyClose"><button data-dojo-type="dijit/form/Button" type="button" data-dojo-props="iconClass:'fa fa-times MVfa-but', showLabel:false, onClick:function() { mv_deleteTPs(mv_Map.Identifys); }">Remove from list</button></div>
+<div id="MVidentifyHint">Click on the map to get information about the features.</div>
+<div id="MVidentifyList"></div>
+</div>
+<div id="MVtoolsContainer" data-dojo-type="dijit/layout/ContentPane" data-dojo-props="title:'Tools'">
+<div id="MVzoomObjects" data-dojo-type="dijit/TitlePane" data-dojo-props="title:'Object selection',open:false">
+<select class="MVselect" style="width:100%;margin-bottom:5px;" data-dojo-type="dijit/form/FilteringSelect" data-dojo-props="required:false, value:'', placeHolder:'Blackspot ID', searchAttr: 'name', store: th0Store, onBlur:function() {this.reset();}, onChange:function() { mv_zoomObjectDojo(this.item,'f0','th0',false,true,false,true); }"></select>
+<select class="MVselect" style="width:100%;margin-bottom:5px;" data-dojo-type="dijit/form/FilteringSelect" data-dojo-props="required:false, value:'', placeHolder:'Blackspot ID', searchAttr: 'name', store: th1Store, onBlur:function() {this.reset();}, onChange:function() { mv_zoomObjectDojo(this.item,'f0','th1',false,true,false,true); }"></select>
+<select class="MVselect" style="width:100%;margin-bottom:5px;" data-dojo-type="dijit/form/FilteringSelect" data-dojo-props="required:false, value:'', placeHolder:'Blackspot ID', searchAttr: 'name', store: th2Store, onBlur:function() {this.reset();}, onChange:function() { mv_zoomObjectDojo(this.item,'f0','th2',false,true,false,true); }"></select>
+<select class="MVselect" style="width:100%;margin-bottom:5px;" data-dojo-type="dijit/form/FilteringSelect" data-dojo-props="required:false, value:'', placeHolder:'Blackspot ID', searchAttr: 'name', store: th3Store, onBlur:function() {this.reset();}, onChange:function() { mv_zoomObjectDojo(this.item,'f0','th3',false,true,false,true); }"></select>
+<select class="MVselect" style="width:100%;margin-bottom:5px;" data-dojo-type="dijit/form/FilteringSelect" data-dojo-props="required:false, value:'', placeHolder:'Name', searchAttr: 'name', store: th4Store, onBlur:function() {this.reset();}, onChange:function() { mv_zoomObjectDojo(this.item,'f0','th4',true,true,false,true); }"></select>
+<select class="MVselect" style="width:100%;margin-bottom:5px;" data-dojo-type="dijit/form/FilteringSelect" data-dojo-props="required:false, value:'', placeHolder:'Town Name', searchAttr: 'name', store: th5Store, onBlur:function() {this.reset();}, onChange:function() { mv_zoomObjectDojo(this.item,'f0','th5',true,true,false,true); }"></select>
+<select class="MVselect" style="width:100%;margin-bottom:5px;" data-dojo-type="dijit/form/FilteringSelect" data-dojo-props="required:false, value:'', placeHolder:'Name', searchAttr: 'name', store: th6Store, onBlur:function() {this.reset();}, onChange:function() { mv_zoomObjectDojo(this.item,'f0','th6',true,true,false,true); }"></select>
+<select class="MVselect" style="width:100%;margin-bottom:5px;" data-dojo-type="dijit/form/FilteringSelect" data-dojo-props="required:false, value:'', placeHolder:'Facility Name', searchAttr: 'name', store: th7Store, onBlur:function() {this.reset();}, onChange:function() { mv_zoomObjectDojo(this.item,'f0','th7',true,true,false,true); }"></select>
+<select class="MVselect" style="width:100%;margin-bottom:5px;" data-dojo-type="dijit/form/FilteringSelect" data-dojo-props="required:false, value:'', placeHolder:'Name', searchAttr: 'name', store: th8Store, onBlur:function() {this.reset();}, onChange:function() { mv_zoomObjectDojo(this.item,'f0','th8',true,true,false,true); }"></select>
+<select class="MVselect" style="width:100%;margin-bottom:5px;" data-dojo-type="dijit/form/FilteringSelect" data-dojo-props="required:false, value:'', placeHolder:'Name', searchAttr: 'name', store: th9Store, onBlur:function() {this.reset();}, onChange:function() { mv_zoomObjectDojo(this.item,'f0','th9',true,true,false,true); }"></select>
+<select class="MVselect" style="width:100%;margin-bottom:5px;" data-dojo-type="dijit/form/FilteringSelect" data-dojo-props="required:false, value:'', placeHolder:'Station', searchAttr: 'name', store: th10Store, onBlur:function() {this.reset();}, onChange:function() { mv_zoomObjectDojo(this.item,'f0','th10',true,true,false,true); }"></select>
+<select class="MVselect" style="width:100%;margin-bottom:5px;" data-dojo-type="dijit/form/FilteringSelect" data-dojo-props="required:false, value:'', placeHolder:'Name', searchAttr: 'name', store: th11Store, onBlur:function() {this.reset();}, onChange:function() { mv_zoomObjectDojo(this.item,'f0','th11',true,true,false,true); }"></select>
+<select class="MVselect" style="width:100%;margin-bottom:5px;" data-dojo-type="dijit/form/FilteringSelect" data-dojo-props="required:false, value:'', placeHolder:'School Name', searchAttr: 'name', store: th12Store, onBlur:function() {this.reset();}, onChange:function() { mv_zoomObjectDojo(this.item,'f0','th12',true,true,false,true); }"></select>
+<select class="MVselect" style="width:100%;margin-bottom:5px;" data-dojo-type="dijit/form/FilteringSelect" data-dojo-props="required:false, value:'', placeHolder:'School Name', searchAttr: 'name', store: th13Store, onBlur:function() {this.reset();}, onChange:function() { mv_zoomObjectDojo(this.item,'f0','th13',true,true,false,true); }"></select>
+<select class="MVselect" style="width:100%;margin-bottom:5px;" data-dojo-type="dijit/form/FilteringSelect" data-dojo-props="required:false, value:'', placeHolder:'Name', searchAttr: 'name', store: th14Store, onBlur:function() {this.reset();}, onChange:function() { mv_zoomObjectDojo(this.item,'f0','th14',true,true,false,true); }"></select>
+<select class="MVselect" style="width:100%;margin-bottom:5px;" data-dojo-type="dijit/form/FilteringSelect" data-dojo-props="required:false, value:'', placeHolder:'Name', searchAttr: 'name', store: th15Store, onBlur:function() {this.reset();}, onChange:function() { mv_zoomObjectDojo(this.item,'f0','th15',true,true,false,true); }"></select>
+</div>
+<div id="MVrouteContainer" data-dojo-type="dijit/TitlePane" data-dojo-props="title:'Location search / routing',open:false">
+<div>
+Address (street, city):<br />
+<form id="MVaddress1Form" onSubmit="return mv_OSMNominatim.doNominatim(this.MVaddress);">
+<img src="symbols/MVaddress1.png" width="17" height="17" style="vertical-align: middle;"/>
+<input id="MVaddress1" type="text" class="formElem" name="MVaddress" style="width:290px; vertical-align: middle;" />
+<button id="MVaddress1Clear" data-dojo-type="dijit/form/Button" type="button" style="position:relative;right:0px;" data-dojo-props="iconClass:'fa fa-times MVfa-but', showLabel:false, onClick:function() { mv_OSMNominatim.clearNominatim(this); }">Clear Selection</button>
+</form>
+<div id="MVaddress1Alert" style="margin:7px 0px;height:35px">&nbsp;</div>
+</div>
+<div id="MVrouting" style="margin-top:5px;height:20px">
+Address (street, city):<br />
+<form id="MVaddress2Form" onSubmit="return mv_OSMNominatim.doNominatim(this.MVaddress);">
+<img src="symbols/MVaddress2.png" width="17" height="17" style="vertical-align: middle;"/> <input id="MVaddress2" type="text" class="formElem" name="MVaddress" style="width:290px; vertical-align: middle;">
+<button id="MVaddress2Clear" data-dojo-type="dijit/form/Button" data-dojo-props="iconClass:'fa fa-times MVfa-but', showLabel:false, onClick:function() { mv_OSMNominatim.clearNominatim(this); }">Clear Selection</button>
+</form>
+<div id="MVaddress2Alert" style="margin:7px 0px;height:35px">&nbsp;</div>
+<div>
+<input type="radio" data-dojo-type="dijit/form/RadioButton" name="MVRoute" id="MVRoutefastest" value="fastest" checked/><img src="pictures/fastest.png" width="26" height="26" style="vertical-align: middle;" title="By car (quickest drive time route)" />
+<input type="radio" data-dojo-type="dijit/form/RadioButton" name="MVRoute" id="MVRouteshortest" value="shortest"/><img src="pictures/shortest.png" width="26" height="26" style="vertical-align: middle;" title="By car (shortest driving distance route)" />
+<input type="radio" data-dojo-type="dijit/form/RadioButton" name="MVRoute" id="MVRoutepedestrian" value="pedestrian"/><img src="pictures/pedestrian.png" width="26" height="26" style="vertical-align: middle;" title="Walking" />
+<input type="radio" data-dojo-type="dijit/form/RadioButton" name="MVRoute" id="MVRoutebicycle" value="bicycle"/><img src="pictures/bicycle.png" width="26" height="26" style="vertical-align: middle;" title="Bicycling" />
+<button data-dojo-type="dijit/form/Button" style="position:relative;left:119px;"  data-dojo-props="iconClass:'fa fa-times MVfa-but', showLabel:false, onClick:function() { mv_OSMNominatim.clearRouting(this); }">Clear route</button>
+</div>
+</div>
+<span class="routeDo"><button data-dojo-type="dijit/form/Button" onClick="mv_OSMNominatim.doRouting()">Get directions</button></span>
+<div id="MVaddressChoice"></div>
+<div id="MVidentifyRoute" style="margin-top:15px"></div>
+</div>
+</div>
+<div id="MVqueryContainer" data-dojo-type="dijit/layout/ContentPane" data-dojo-props="title:'Queries'"></div>
+<div id="MVinfoContainer" data-dojo-type="dijit/layout/ContentPane" data-dojo-props="title:'Info'" href="embfiles/info.html"></div>
+<div id="MVhelpContainer" data-dojo-type="dijit/layout/ContentPane" data-dojo-props="iconClass:'fa fa-question fa-lg', tooltip:'Help'" href="embfiles/help.html"></div>
+</div>
+<div id="MVmainSite" data-dojo-type="dijit/layout/LayoutContainer"  data-dojo-props="region:'center', design:'headline'">
+<div id="MVtoolbar" data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region:'top'">
+<div class="MVtbButton" data-dojo-type="dijit/form/ToggleButton" id="MVtoolbar.zoomin" data-dojo-props="iconClass:'fa fa-plus fa-lg', showLabel:false">Zoom In</div>
+<div class="MVtbButton" data-dojo-type="dijit/form/ToggleButton" id="MVtoolbar.zoomout" data-dojo-props="iconClass:'fa fa-minus fa-lg', showLabel:false">Zoom Out</div>
+<div class="MVtbButton" data-dojo-type="dijit/form/ComboButton" data-dojo-props="iconClass:'fa fa-binoculars fa-lg', showLabel:false, optionsTitle:'Zoom to map section', onClick:function() { this.toggleDropDown(); }" id="MVlistBookmarks">
+<span>Zoom to map section</span>
+<div data-dojo-type="dijit/Menu">
+<div data-dojo-type="dijit/MenuItem" data-dojo-props="onClick:function() { mv_zoomBookmark('5603.633,5672.478,9335.191,9375.919'); }">Mombasa</div>
+<div data-dojo-type="dijit/MenuItem" data-dojo-props="onClick:function() { mv_zoomBookmark('5443.437,5622.434,9215.793,9321.676'); }">Mombasa - Mariakani</div>
+<div data-dojo-type="dijit/MenuItem" data-dojo-props="onClick:function() { mv_zoomBookmark('5132.604,5476.829,9017.197,9220.781'); }">Mariakani - Samburu</div>
+<div data-dojo-type="dijit/MenuItem" data-dojo-props="onClick:function() { mv_zoomBookmark('4494.559,5045.319,8718.595,9044.241'); }">Miasenyi - Voi</div>
+<div data-dojo-type="dijit/MenuItem" data-dojo-props="onClick:function() { mv_zoomBookmark('4059.009,5160.529,8097.163,8748.152'); }">Voi - Kenani</div>
+<div data-dojo-type="dijit/MenuItem" data-dojo-props="onClick:function() { mv_zoomBookmark('3663.877,4490.016,7589.899,8077.892'); }">Mtito Andei - Makindu</div>
+<div data-dojo-type="dijit/MenuItem" data-dojo-props="onClick:function() { mv_zoomBookmark('3366.954,3917.713,7319.958,7645.205'); }">Makindu - Sultan Hamud</div>
+<div data-dojo-type="dijit/MenuItem" data-dojo-props="onClick:function() { mv_zoomBookmark('3020.855,3571.615,7067.866,7393.062'); }">Sultan Hamud - Malili</div>
+<div data-dojo-type="dijit/MenuItem" data-dojo-props="onClick:function() { mv_zoomBookmark('2915.481,3466.24,6781.608,7106.755'); }">Konza - Athi River</div>
+<div data-dojo-type="dijit/MenuItem" data-dojo-props="onClick:function() { mv_zoomBookmark('2927.735,3065.425,6743.837,6825.118'); }">Athi River - Mlolongo</div>
+<div data-dojo-type="dijit/MenuItem" data-dojo-props="onClick:function() { mv_zoomBookmark('2862.169,2999.859,6672.514,6753.792'); }">Mlolongo - Mombasa Road</div>
+<div data-dojo-type="dijit/MenuItem" data-dojo-props="onClick:function() { mv_zoomBookmark('2790.045,2858.89,6621.805,6662.443'); }">Riverside - Kengemi Market</div>
+<div data-dojo-type="dijit/MenuItem" data-dojo-props="onClick:function() { mv_zoomBookmark('2738.513,2793.589,6617.893,6650.403'); }">Kangemi - Kinoo</div>
+<div data-dojo-type="dijit/MenuItem" data-dojo-props="onClick:function() { mv_zoomBookmark('2624.131,2789.358,6514.51,6612.038'); }">Gitaru - Rironi</div>
+<div data-dojo-type="dijit/MenuItem" data-dojo-props="onClick:function() { mv_zoomBookmark('2530.438,2750.742,6245.832,6375.859'); }">Kimende - Kinungi</div>
+<div data-dojo-type="dijit/MenuItem" data-dojo-props="onClick:function() { mv_zoomBookmark('2377.75,2721.975,6047.428,6250.586'); }">Kinungi - Naivasha</div>
+<div data-dojo-type="dijit/MenuItem" data-dojo-props="onClick:function() { mv_zoomBookmark('2244.86,2589.085,5882.332,6085.483'); }">Naivasha - Gilgil</div>
+<div data-dojo-type="dijit/MenuItem" data-dojo-props="onClick:function() { mv_zoomBookmark('2047.575,2598.335,5672.495,5997.528'); }">Gilgil - Nakuru</div>
+<div data-dojo-type="dijit/MenuItem" data-dojo-props="onClick:function() { mv_zoomBookmark('2008.216,2180.328,5608.254,5709.825'); }">Nakuru</div>
+<div data-dojo-type="dijit/MenuItem" data-dojo-props="onClick:function() { mv_zoomBookmark('1663.259,2007.484,5477.121,5680.261'); }">Salgaa - Mau Summit</div>
+<div data-dojo-type="dijit/MenuItem" data-dojo-props="onClick:function() { mv_zoomBookmark('1557.884,1902.109,5331.645,5534.784'); }">Mau Summit - Timboroa</div>
+<div data-dojo-type="dijit/MenuItem" data-dojo-props="onClick:function() { mv_zoomBookmark('1389.284,1733.509,5179.729,5382.869'); }">Timboroa - Burnt Forest</div>
+<div data-dojo-type="dijit/MenuItem" data-dojo-props="onClick:function() { mv_zoomBookmark('1087.795,1638.554,4759.738,5084.773'); }">Cheptiret - Sugoi</div>
+<div data-dojo-type="dijit/MenuItem" data-dojo-props="onClick:function() { mv_zoomBookmark('775.417,1188.486,4685.268,4929.049'); }">Turbo - Webuye</div>
+<div data-dojo-type="dijit/MenuItem" data-dojo-props="onClick:function() { mv_zoomBookmark('635.938,856.241,4742.708,4872.725'); }">Webuye - Mabanga</div>
+<div data-dojo-type="dijit/MenuItem" data-dojo-props="onClick:function() { mv_zoomBookmark('306.336,581.716,4716.702,4879.223'); }">kimaeti - Malaba</div>
+<div data-dojo-type="dijit/MenuItem" data-dojo-props="onClick:function() { mv_zoomBookmark('83.644,634.404,4897.489,5222.518'); }">Busia - Ugunja</div>
+<div data-dojo-type="dijit/MenuItem" data-dojo-props="onClick:function() { mv_zoomBookmark('365.612,640.992,5173.655,5336.167'); }">Ugunja - Yala</div>
+<div data-dojo-type="dijit/MenuItem" data-dojo-props="onClick:function() { mv_zoomBookmark('599.415,709.567,5287.706,5352.711'); }">Yala - Luanda</div>
+<div data-dojo-type="dijit/MenuItem" data-dojo-props="onClick:function() { mv_zoomBookmark('632.667,770.357,5363.459,5444.715'); }">Luanda - Kisumu</div>
+<div data-dojo-type="dijit/MenuItem" data-dojo-props="onClick:function() { mv_zoomBookmark('704.556,842.246,5419.074,5500.33'); }">Kisumu</div>
+<div data-dojo-type="dijit/MenuItem" data-dojo-props="onClick:function() { mv_zoomBookmark('850.138,1015.365,5481.62,5579.127'); }">Kisumu - Ahero</div>
+<div data-dojo-type="dijit/MenuItem" data-dojo-props="onClick:function() { mv_zoomBookmark('948.347,1223.727,5476.82,5639.333'); }">Ahero - Awasi</div>
+<div data-dojo-type="dijit/MenuItem" data-dojo-props="onClick:function() { mv_zoomBookmark('1178.299,1729.058,5512.941,5837.968'); }">Kericho - Londiani</div>
+<div data-dojo-type="dijit/MenuItem" data-dojo-props="onClick:function() { mv_zoomBookmark('2857.995,2926.839,6614.143,6654.781'); }">Nairobi</div>
+</div>
+</div>
+<div class="MVtbButton" data-dojo-type="dijit/form/Button" id="MVtoolbar.fullextent" data-dojo-props="iconClass:'fa fa-globe fa-lg', showLabel:false">Back to original view</div>
+<div class="MVtbButton" data-dojo-type="dijit/form/Button" id="MVtoolbar.previousextent" data-dojo-props="iconClass:'fa fa-arrow-left fa-lg', showLabel:false"></div>
+<div class="MVtbButton" data-dojo-type="dijit/form/Button" id="MVtoolbar.nextextent" data-dojo-props="iconClass:'fa fa-arrow-right fa-lg', showLabel:false"></div>
+<div id="MVtbSmallScreen">
+<div class="MVtbButton" data-dojo-type="dijit/form/Button" id="MVtoolbar.legend" data-dojo-props="iconClass:'fa fa-list fa-lg', showLabel:false">Map Content</div>
+<div class="MVtbButton" data-dojo-type="dijit/form/Button" id="MVtoolbar.query" data-dojo-props="iconClass:'fa fa-search fa-lg', showLabel:false">Queries</div>
+<div class="MVtbButton" data-dojo-type="dijit/form/DropDownButton"  id="MVtoolbar.help_info" data-dojo-props="iconClass:'fa fa-question fa-lg', showLabel:false">
+<label for="MVtoolbar.help_info">Help</label>
+<div data-dojo-type="dijit/DropDownMenu">
+<div data-dojo-type="dijit/MenuItem" data-dojo-props="iconClass:'fa-fw fa fa-question fa-lg', onClick:function(){ mv_showHelp(this); }">Help</div>
+<div data-dojo-type="dijit/MenuItem" data-dojo-props="iconClass:'fa-fw fa fa-info fa-lg', onClick:function(){ mv_showInfo(this); }">Info</div>
+</div>
+</div>
+<span class="MVtoolbarSeparator"></span>
+<select class="MVselect MVselToolbar" data-dojo-type="dijit/form/FilteringSelect" data-dojo-props="required:false, value:'', placeHolder:'Blackspot ID', searchAttr: 'name', store: th0Store, onBlur:function() {this.reset();}, onChange:function() { mv_zoomObjectDojo(this.item,'f0','th0',false,true,false,true); }"></select>
+<select class="MVselect MVselToolbar" data-dojo-type="dijit/form/FilteringSelect" data-dojo-props="required:false, value:'', placeHolder:'Blackspot ID', searchAttr: 'name', store: th1Store, onBlur:function() {this.reset();}, onChange:function() { mv_zoomObjectDojo(this.item,'f0','th1',false,true,false,true); }"></select>
+<select class="MVselect MVselToolbar" data-dojo-type="dijit/form/FilteringSelect" data-dojo-props="required:false, value:'', placeHolder:'Blackspot ID', searchAttr: 'name', store: th2Store, onBlur:function() {this.reset();}, onChange:function() { mv_zoomObjectDojo(this.item,'f0','th2',false,true,false,true); }"></select>
+<select class="MVselect MVselToolbar" data-dojo-type="dijit/form/FilteringSelect" data-dojo-props="required:false, value:'', placeHolder:'Blackspot ID', searchAttr: 'name', store: th3Store, onBlur:function() {this.reset();}, onChange:function() { mv_zoomObjectDojo(this.item,'f0','th3',false,true,false,true); }"></select>
+<select class="MVselect MVselToolbar" data-dojo-type="dijit/form/FilteringSelect" data-dojo-props="required:false, value:'', placeHolder:'Name', searchAttr: 'name', store: th4Store, onBlur:function() {this.reset();}, onChange:function() { mv_zoomObjectDojo(this.item,'f0','th4',true,true,false,true); }"></select>
+<select class="MVselect MVselToolbar" data-dojo-type="dijit/form/FilteringSelect" data-dojo-props="required:false, value:'', placeHolder:'Town Name', searchAttr: 'name', store: th5Store, onBlur:function() {this.reset();}, onChange:function() { mv_zoomObjectDojo(this.item,'f0','th5',true,true,false,true); }"></select>
+<select class="MVselect MVselToolbar" data-dojo-type="dijit/form/FilteringSelect" data-dojo-props="required:false, value:'', placeHolder:'Name', searchAttr: 'name', store: th6Store, onBlur:function() {this.reset();}, onChange:function() { mv_zoomObjectDojo(this.item,'f0','th6',true,true,false,true); }"></select>
+<select class="MVselect MVselToolbar" data-dojo-type="dijit/form/FilteringSelect" data-dojo-props="required:false, value:'', placeHolder:'Facility Name', searchAttr: 'name', store: th7Store, onBlur:function() {this.reset();}, onChange:function() { mv_zoomObjectDojo(this.item,'f0','th7',true,true,false,true); }"></select>
+<select class="MVselect MVselToolbar" data-dojo-type="dijit/form/FilteringSelect" data-dojo-props="required:false, value:'', placeHolder:'Name', searchAttr: 'name', store: th8Store, onBlur:function() {this.reset();}, onChange:function() { mv_zoomObjectDojo(this.item,'f0','th8',true,true,false,true); }"></select>
+<select class="MVselect MVselToolbar" data-dojo-type="dijit/form/FilteringSelect" data-dojo-props="required:false, value:'', placeHolder:'Name', searchAttr: 'name', store: th9Store, onBlur:function() {this.reset();}, onChange:function() { mv_zoomObjectDojo(this.item,'f0','th9',true,true,false,true); }"></select>
+<select class="MVselect MVselToolbar" data-dojo-type="dijit/form/FilteringSelect" data-dojo-props="required:false, value:'', placeHolder:'Station', searchAttr: 'name', store: th10Store, onBlur:function() {this.reset();}, onChange:function() { mv_zoomObjectDojo(this.item,'f0','th10',true,true,false,true); }"></select>
+<select class="MVselect MVselToolbar" data-dojo-type="dijit/form/FilteringSelect" data-dojo-props="required:false, value:'', placeHolder:'Name', searchAttr: 'name', store: th11Store, onBlur:function() {this.reset();}, onChange:function() { mv_zoomObjectDojo(this.item,'f0','th11',true,true,false,true); }"></select>
+<select class="MVselect MVselToolbar" data-dojo-type="dijit/form/FilteringSelect" data-dojo-props="required:false, value:'', placeHolder:'School Name', searchAttr: 'name', store: th12Store, onBlur:function() {this.reset();}, onChange:function() { mv_zoomObjectDojo(this.item,'f0','th12',true,true,false,true); }"></select>
+<select class="MVselect MVselToolbar" data-dojo-type="dijit/form/FilteringSelect" data-dojo-props="required:false, value:'', placeHolder:'School Name', searchAttr: 'name', store: th13Store, onBlur:function() {this.reset();}, onChange:function() { mv_zoomObjectDojo(this.item,'f0','th13',true,true,false,true); }"></select>
+<select class="MVselect MVselToolbar" data-dojo-type="dijit/form/FilteringSelect" data-dojo-props="required:false, value:'', placeHolder:'Name', searchAttr: 'name', store: th14Store, onBlur:function() {this.reset();}, onChange:function() { mv_zoomObjectDojo(this.item,'f0','th14',true,true,false,true); }"></select>
+<select class="MVselect MVselToolbar" data-dojo-type="dijit/form/FilteringSelect" data-dojo-props="required:false, value:'', placeHolder:'Name', searchAttr: 'name', store: th15Store, onBlur:function() {this.reset();}, onChange:function() { mv_zoomObjectDojo(this.item,'f0','th15',true,true,false,true); }"></select>
+</div>
+<div class="MVtbButton" data-dojo-type="dijit/form/ToggleButton" id="MVtoolbar.koord" data-dojo-props="iconClass:'fa fa-crosshairs fa-lg', showLabel:false">Coordinate read-out</div>
+<div class="MVtbButton" data-dojo-type="dijit/form/ToggleButton" id="MVtoolbar.zoomlocation" data-dojo-props="iconClass:'fa fa-map-pin fa-lg', showLabel:false">current position</div>
+<div class="MVtbButton" data-dojo-type="dijit/form/Button" id="MVtoolbar.print" data-dojo-props="iconClass:'fa fa-print fa-lg', showLabel:false">Print</div>
+<div class="MVtbButton" style="position:absolute;right:25px;top:0px" data-dojo-type="dijit/form/DropDownButton" id="MVtoolbar.share" data-dojo-props="iconClass:'fa fa-share-alt fa-lg', showLabel:false">
+<label for="MVtoolbar.share">Share map</label>
+<div data-dojo-type="dijit/layout/ContentPane" style="border:2px solid darkgrey">
+<div class="MVtbButton" data-dojo-type="dijit/form/Button" data-dojo-props="iconClass:'fa fa-envelope fa-lg', onClick:function(){ mv_share('email'); }" ></div>
+<div class="MVtbButton" data-dojo-type="dijit/form/Button" data-dojo-props="iconClass:'fa fa-facebook-official fa-lg', onClick:function(){ mv_share('facebook'); }"></div>
+<div class="MVtbButton" data-dojo-type="dijit/form/Button" data-dojo-props="iconClass:'fa fa-google-plus fa-lg', onClick:function(){ mv_share('google+'); }" ></div>
+<div class="MVtbButton" data-dojo-type="dijit/form/Button" data-dojo-props="iconClass:'fa fa-twitter fa-lg', onClick:function(){ mv_share('twitter'); }"></div>
+</div>
+</div>
+<!--[IF !IE]> -->
+<div style="position:absolute;right:0px;top:0px" class="MVtbButton" data-dojo-type="dijit/form/Button" id="MVtoolbar.fullscreen" data-dojo-props="iconClass:'fa fa-arrows-alt fa-lg', showLabel:false">Fullscreen mode.</div>
+<!-- <![ENDIF]-->
+</div>
+<div id="MVmap" class="MVmap" data-dojo-type="dijit/layout/ContentPane"  data-dojo-props="region:'center'">
+<div id="MVCredit">TOO</div>
+<div id="MVoverviewFrame" data-dojo-type="dijit/TitlePane" data-dojo-props="title:'Overview',open:true">
+  <div id="MVoverview"></div>
+</div>
+<div id="MVtbSmartphone">
+<div class="MVtbButtonMob" data-dojo-type="dijit/form/Button" id="MVtbSmartphone.zoomin" data-dojo-props="iconClass:'fa fa-plus MVfa-but', showLabel:false, onClick:function() { mv_zoomInButton(); }">Zoom In</div>
+<div class="MVtbButtonMob" data-dojo-type="dijit/form/Button" id="MVtbSmartphone.zoomout" data-dojo-props="iconClass:'fa fa-minus MVfa-but', showLabel:false, onClick:function() { mv_zoomOutButton(); }">Zoom Out</div>
+<div class="MVtbButtonMob" data-dojo-type="dijit/form/Button" id="MVtbSmartphone.fullextent" data-dojo-props="iconClass:'fa fa-globe MVfa-but', showLabel:false, onClick:function() { mv_fullExtent(); }">Back to original view</div>
+<div class="MVtbButtonMob" data-dojo-type="dijit/form/ToggleButton" id="MVtbSmartphone.zoomlocation" data-dojo-props="iconClass:'fa fa-map-pin MVfa-but', showLabel:false, onClick:function() { mv_zoomToDeviceLocation(this,'#ECE9D8'); }">current position</div>
+<div class="MVtbButtonMob" data-dojo-type="dijit/form/DropDownButton" id="MVtbSmartphone.share" data-dojo-props="iconClass:'fa fa-share-alt MVfa-but', showLabel:false">
+<label for="MVtbSmartphone.share">Share map</label>
+<div data-dojo-type="dijit/layout/ContentPane" style="border:2px solid darkgrey">
+<div class="MVtbButton" data-dojo-type="dijit/form/Button" data-dojo-props="iconClass:'fa fa-envelope MVfa-but', onClick:function(){ mv_share('email'); }" ></div>
+<div class="MVtbButton" data-dojo-type="dijit/form/Button" data-dojo-props="iconClass:'fa fa-facebook-official MVfa-but', onClick:function(){ mv_share('facebook'); }"></div>
+<div class="MVtbButton" data-dojo-type="dijit/form/Button" data-dojo-props="iconClass:'fa fa-google-plus MVfa-but', onClick:function(){ mv_share('google+'); }" ></div>
+<div class="MVtbButton" data-dojo-type="dijit/form/Button" data-dojo-props="iconClass:'fa fa-twitter MVfa-but', onClick:function(){ mv_share('twitter'); }"></div>
+</div>
+</div>
+<div class="MVtbButtonMob" data-dojo-type="dijit/form/ToggleButton" id="MVtbSmartphone.overview" data-dojo-props="iconClass:'fa fa-object-ungroup MVfa-but', showLabel:false, onClick:function() { mv_showOverview(this,'#ECE9D8'); }">Overview</div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Content -->
+<div id="MVidentifyFPContainer"></div>
+<div id="MVlegendFPContainer"></div>
+<div id="MVlegendContentContainer" style="display:none">
+<div id="MVlegendContent">
+<div id="MVth0Legend" class="MVlegC">
+<div id="th0Check" class="MVcheckBut" data-dojo-type="dijit/form/ToggleButton" data-dojo-props="checked:true, onClick:function(){ mv_changeLayerVis(this); },iconClass:'fa fa-eye fa-lg',showLabel:false"></div>
+<div class="MVleg" data-dojo-type="dijit/TitlePane" data-dojo-props="title:'N C Blackspot Points'">
+<div id="th0Legend" >
+</div>
+</div>
+<div style="position:absolute;top:5px;right:0px">
+<div class="MVlegendButton" data-dojo-type="dijit/form/Button" data-dojo-props="onClick:function(){mv_showTable('th0');},iconClass:'fa fa-th MVfa-but',showLabel:false">Attribute Table</div>
+
+</div>
+</div>
+<div id="MVth1Legend" class="MVlegC">
+<div id="th1Check" class="MVcheckBut" data-dojo-type="dijit/form/ToggleButton" data-dojo-props="checked:true, onClick:function(){ mv_changeLayerVis(this); },iconClass:'fa fa-eye fa-lg',showLabel:false"></div>
+<div class="MVleg" data-dojo-type="dijit/TitlePane" data-dojo-props="title:'Nairobi Blackspot Points'">
+<div id="th1Legend" >
+</div>
+</div>
+<div style="position:absolute;top:5px;right:0px">
+<div class="MVlegendButton" data-dojo-type="dijit/form/Button" data-dojo-props="onClick:function(){mv_showTable('th1');},iconClass:'fa fa-th MVfa-but',showLabel:false">Attribute Table</div>
+
+</div>
+</div>
+<div id="MVth2Legend" class="MVlegC">
+<div id="th2Check" class="MVcheckBut" data-dojo-type="dijit/form/ToggleButton" data-dojo-props="checked:true, onClick:function(){ mv_changeLayerVis(this); },iconClass:'fa fa-eye fa-lg',showLabel:false"></div>
+<div class="MVleg" data-dojo-type="dijit/TitlePane" data-dojo-props="title:'Northern Corridor Blackspots'">
+<div id="th2Legend" >
+</div>
+</div>
+<div style="position:absolute;top:5px;right:0px">
+<div class="MVlegendButton" data-dojo-type="dijit/form/Button" data-dojo-props="onClick:function(){mv_showTable('th2');},iconClass:'fa fa-th MVfa-but',showLabel:false">Attribute Table</div>
+
+</div>
+</div>
+<div id="MVth3Legend" class="MVlegC">
+<div id="th3Check" class="MVcheckBut" data-dojo-type="dijit/form/ToggleButton" data-dojo-props="checked:true, onClick:function(){ mv_changeLayerVis(this); },iconClass:'fa fa-eye fa-lg',showLabel:false"></div>
+<div class="MVleg" data-dojo-type="dijit/TitlePane" data-dojo-props="title:'Nairobi High Risk Roads Blackspots'">
+<div id="th3Legend" >
+</div>
+</div>
+<div style="position:absolute;top:5px;right:0px">
+<div class="MVlegendButton" data-dojo-type="dijit/form/Button" data-dojo-props="onClick:function(){mv_showTable('th3');},iconClass:'fa fa-th MVfa-but',showLabel:false">Attribute Table</div>
+
+</div>
+</div>
+<div id="MVth4Legend" class="MVlegC">
+<div id="th4Check" class="MVcheckBut" data-dojo-type="dijit/form/ToggleButton" data-dojo-props="checked:true, onClick:function(){ mv_changeLayerVis(this); },iconClass:'fa fa-eye fa-lg',showLabel:false"></div>
+<div class="MVleg" data-dojo-type="dijit/TitlePane" data-dojo-props="title:'Main Bridge'">
+<div id="th4Legend" >
+</div>
+</div>
+<div style="position:absolute;top:5px;right:0px">
+<div class="MVlegendButton" data-dojo-type="dijit/form/Button" data-dojo-props="onClick:function(){mv_showTable('th4');},iconClass:'fa fa-th MVfa-but',showLabel:false">Attribute Table</div>
+
+</div>
+</div>
+<div id="MVth5Legend" class="MVlegC">
+<div id="th5Check" class="MVcheckBut" data-dojo-type="dijit/form/ToggleButton" data-dojo-props="checked:true, onClick:function(){ mv_changeLayerVis(this); },iconClass:'fa fa-eye fa-lg',showLabel:false"></div>
+<div class="MVleg" data-dojo-type="dijit/TitlePane" data-dojo-props="title:'Major Town'">
+<div id="th5Legend" >
+</div>
+</div>
+<div style="position:absolute;top:5px;right:0px">
+<div class="MVlegendButton" data-dojo-type="dijit/form/Button" data-dojo-props="onClick:function(){mv_showTable('th5');},iconClass:'fa fa-th MVfa-but',showLabel:false">Attribute Table</div>
+
+</div>
+</div>
+<div id="MVth6Legend" class="MVlegC">
+<div id="th6Check" class="MVcheckBut" data-dojo-type="dijit/form/ToggleButton" data-dojo-props="checked:true, onClick:function(){ mv_changeLayerVis(this); },iconClass:'fa fa-eye fa-lg',showLabel:false"></div>
+<div class="MVleg" data-dojo-type="dijit/TitlePane" data-dojo-props="title:'Market Center'">
+<div id="th6Legend" >
+</div>
+</div>
+<div style="position:absolute;top:5px;right:0px">
+<div class="MVlegendButton" data-dojo-type="dijit/form/Button" data-dojo-props="onClick:function(){mv_showTable('th6');},iconClass:'fa fa-th MVfa-but',showLabel:false">Attribute Table</div>
+
+</div>
+</div>
+<div id="MVth7Legend" class="MVlegC">
+<div id="th7Check" class="MVcheckBut" data-dojo-type="dijit/form/ToggleButton" data-dojo-props="checked:true, onClick:function(){ mv_changeLayerVis(this); },iconClass:'fa fa-eye fa-lg',showLabel:false"></div>
+<div class="MVleg" data-dojo-type="dijit/TitlePane" data-dojo-props="title:'Health Facilities by Level'">
+<div id="th7Legend" >
+</div>
+</div>
+<div style="position:absolute;top:5px;right:0px">
+<div class="MVlegendButton" data-dojo-type="dijit/form/Button" data-dojo-props="onClick:function(){mv_showTable('th7');},iconClass:'fa fa-th MVfa-but',showLabel:false">Attribute Table</div>
+
+</div>
+</div>
+<div id="MVth9Legend" class="MVlegC">
+<div id="th9Check" class="MVcheckBut" data-dojo-type="dijit/form/ToggleButton" data-dojo-props="checked:true, onClick:function(){ mv_changeLayerVis(this); },iconClass:'fa fa-eye fa-lg',showLabel:false"></div>
+<div class="MVleg" data-dojo-type="dijit/TitlePane" data-dojo-props="title:'North Star Wellnes Center'">
+<div id="th9Legend" >
+</div>
+</div>
+<div style="position:absolute;top:5px;right:0px">
+<div class="MVlegendButton" data-dojo-type="dijit/form/Button" data-dojo-props="onClick:function(){mv_showTable('th9');},iconClass:'fa fa-th MVfa-but',showLabel:false">Attribute Table</div>
+
+</div>
+</div>
+<div id="MVth8Legend" class="MVlegC">
+<div id="th8Check" class="MVcheckBut" data-dojo-type="dijit/form/ToggleButton" data-dojo-props="checked:true, onClick:function(){ mv_changeLayerVis(this); },iconClass:'fa fa-eye fa-lg',showLabel:false"></div>
+<div class="MVleg" data-dojo-type="dijit/TitlePane" data-dojo-props="title:'Weigh Bridge'">
+<div id="th8Legend" >
+</div>
+</div>
+<div style="position:absolute;top:5px;right:0px">
+<div class="MVlegendButton" data-dojo-type="dijit/form/Button" data-dojo-props="onClick:function(){mv_showTable('th8');},iconClass:'fa fa-th MVfa-but',showLabel:false">Attribute Table</div>
+
+</div>
+</div>
+<div id="MVth10Legend" class="MVlegC">
+<div id="th10Check" class="MVcheckBut" data-dojo-type="dijit/form/ToggleButton" data-dojo-props="checked:true, onClick:function(){ mv_changeLayerVis(this); },iconClass:'fa fa-eye fa-lg',showLabel:false"></div>
+<div class="MVleg" data-dojo-type="dijit/TitlePane" data-dojo-props="title:'TOTAL Service Station'">
+<div id="th10Legend" >
+</div>
+</div>
+<div style="position:absolute;top:5px;right:0px">
+<div class="MVlegendButton" data-dojo-type="dijit/form/Button" data-dojo-props="onClick:function(){mv_showTable('th10');},iconClass:'fa fa-th MVfa-but',showLabel:false">Attribute Table</div>
+
+</div>
+</div>
+<div id="MVth11Legend" class="MVlegC">
+<div id="th11Check" class="MVcheckBut" data-dojo-type="dijit/form/ToggleButton" data-dojo-props="checked:true, onClick:function(){ mv_changeLayerVis(this); },iconClass:'fa fa-eye fa-lg',showLabel:false"></div>
+<div class="MVleg" data-dojo-type="dijit/TitlePane" data-dojo-props="title:'Railway Station'">
+<div id="th11Legend" >
+</div>
+</div>
+<div style="position:absolute;top:5px;right:0px">
+<div class="MVlegendButton" data-dojo-type="dijit/form/Button" data-dojo-props="onClick:function(){mv_showTable('th11');},iconClass:'fa fa-th MVfa-but',showLabel:false">Attribute Table</div>
+
+</div>
+</div>
+<div id="MVth12Legend" class="MVlegC">
+<div id="th12Check" class="MVcheckBut" data-dojo-type="dijit/form/ToggleButton" data-dojo-props="checked:true, onClick:function(){ mv_changeLayerVis(this); },iconClass:'fa fa-eye fa-lg',showLabel:false"></div>
+<div class="MVleg" data-dojo-type="dijit/TitlePane" data-dojo-props="title:'Public Primary School'">
+<div id="th12Legend" >
+</div>
+</div>
+<div style="position:absolute;top:5px;right:0px">
+<div class="MVlegendButton" data-dojo-type="dijit/form/Button" data-dojo-props="onClick:function(){mv_showTable('th12');},iconClass:'fa fa-th MVfa-but',showLabel:false">Attribute Table</div>
+
+</div>
+</div>
+<div id="MVth13Legend" class="MVlegC">
+<div id="th13Check" class="MVcheckBut" data-dojo-type="dijit/form/ToggleButton" data-dojo-props="checked:true, onClick:function(){ mv_changeLayerVis(this); },iconClass:'fa fa-eye fa-lg',showLabel:false"></div>
+<div class="MVleg" data-dojo-type="dijit/TitlePane" data-dojo-props="title:'Other School (Secondary, ECDE & Private'">
+<div id="th13Legend" >
+</div>
+</div>
+<div style="position:absolute;top:5px;right:0px">
+<div class="MVlegendButton" data-dojo-type="dijit/form/Button" data-dojo-props="onClick:function(){mv_showTable('th13');},iconClass:'fa fa-th MVfa-but',showLabel:false">Attribute Table</div>
+
+</div>
+</div>
+<div id="MVth14Legend" class="MVlegC">
+<div id="th14Check" class="MVcheckBut" data-dojo-type="dijit/form/ToggleButton" data-dojo-props="checked:true, onClick:function(){ mv_changeLayerVis(this); },iconClass:'fa fa-eye fa-lg',showLabel:false"></div>
+<div class="MVleg" data-dojo-type="dijit/TitlePane" data-dojo-props="title:'Police Station'">
+<div id="th14Legend" >
+</div>
+</div>
+<div style="position:absolute;top:5px;right:0px">
+<div class="MVlegendButton" data-dojo-type="dijit/form/Button" data-dojo-props="onClick:function(){mv_showTable('th14');},iconClass:'fa fa-th MVfa-but',showLabel:false">Attribute Table</div>
+
+</div>
+</div>
+<div id="MVth15Legend" class="MVlegC">
+<div id="th15Check" class="MVcheckBut" data-dojo-type="dijit/form/ToggleButton" data-dojo-props="checked:true, onClick:function(){ mv_changeLayerVis(this); },iconClass:'fa fa-eye fa-lg',showLabel:false"></div>
+<div class="MVleg" data-dojo-type="dijit/TitlePane" data-dojo-props="title:'Proposed Road Side Station'">
+<div id="th15Legend" >
+</div>
+</div>
+<div style="position:absolute;top:5px;right:0px">
+<div class="MVlegendButton" data-dojo-type="dijit/form/Button" data-dojo-props="onClick:function(){mv_showTable('th15');},iconClass:'fa fa-th MVfa-but',showLabel:false">Attribute Table</div>
+
+</div>
+</div>
+<div id="MVth16Legend" class="MVlegC">
+<div id="th16Check" class="MVcheckBut" data-dojo-type="dijit/form/ToggleButton" data-dojo-props="checked:true, onClick:function(){ mv_changeLayerVis(this); },iconClass:'fa fa-eye fa-lg',showLabel:false"></div>
+<div class="MVleg" data-dojo-type="dijit/TitlePane" data-dojo-props="title:'Northern Corridor'">
+<div id="th16Legend" >
+</div>
+</div>
+<div style="position:absolute;top:5px;right:0px">
+<div class="MVlegendButton" data-dojo-type="dijit/form/Button" data-dojo-props="onClick:function(){mv_showTable('th16');},iconClass:'fa fa-th MVfa-but',showLabel:false">Attribute Table</div>
+
+</div>
+</div>
+<div id="MVth17Legend" class="MVlegC">
+<div id="th17Check" class="MVcheckBut" data-dojo-type="dijit/form/ToggleButton" data-dojo-props="checked:true, onClick:function(){ mv_changeLayerVis(this); },iconClass:'fa fa-eye fa-lg',showLabel:false"></div>
+<div class="MVleg" data-dojo-type="dijit/TitlePane" data-dojo-props="title:'Other Major Road'">
+<div id="th17Legend" >
+</div>
+</div>
+<div style="position:absolute;top:5px;right:0px">
+<div class="MVlegendButton" data-dojo-type="dijit/form/Button" data-dojo-props="onClick:function(){mv_showTable('th17');},iconClass:'fa fa-th MVfa-but',showLabel:false">Attribute Table</div>
+
+</div>
+</div>
+<div id="MVth18Legend" class="MVlegC">
+<div id="th18Check" class="MVcheckBut" data-dojo-type="dijit/form/ToggleButton" data-dojo-props="checked:true, onClick:function(){ mv_changeLayerVis(this); },iconClass:'fa fa-eye fa-lg',showLabel:false"></div>
+<div class="MVleg" data-dojo-type="dijit/TitlePane" data-dojo-props="title:'Major Road'">
+<div id="th18Legend" >
+</div>
+</div>
+<div style="position:absolute;top:5px;right:0px">
+<div class="MVlegendButton" data-dojo-type="dijit/form/Button" data-dojo-props="onClick:function(){mv_layerInfo(this,'th18');},iconClass:'fa fa-info MVfa-but',showLabel:false">Object-Information</div>
+<div class="MVlegendButton" data-dojo-type="dijit/form/Button" data-dojo-props="onClick:function(){mv_showTable('th18');},iconClass:'fa fa-th MVfa-but',showLabel:false">Attribute Table</div>
+
+</div>
+</div>
+<div id="MVth19Legend" class="MVlegC">
+<div id="th19Check" class="MVcheckBut" data-dojo-type="dijit/form/ToggleButton" data-dojo-props="checked:true, onClick:function(){ mv_changeLayerVis(this); },iconClass:'fa fa-eye fa-lg',showLabel:false"></div>
+<div class="MVleg" data-dojo-type="dijit/TitlePane" data-dojo-props="title:'Railway'">
+<div id="th19Legend" >
+</div>
+</div>
+<div style="position:absolute;top:5px;right:0px">
+<div class="MVlegendButton" data-dojo-type="dijit/form/Button" data-dojo-props="onClick:function(){mv_layerInfo(this,'th19');},iconClass:'fa fa-info MVfa-but',showLabel:false">Object-Information</div>
+<div class="MVlegendButton" data-dojo-type="dijit/form/Button" data-dojo-props="onClick:function(){mv_showTable('th19');},iconClass:'fa fa-th MVfa-but',showLabel:false">Attribute Table</div>
+
+</div>
+</div>
+<div id="MVth20Legend" class="MVlegC">
+<div id="th20Check" class="MVcheckBut" data-dojo-type="dijit/form/ToggleButton" data-dojo-props="checked:true, onClick:function(){ mv_changeLayerVis(this); },iconClass:'fa fa-eye fa-lg',showLabel:false"></div>
+<div class="MVleg" data-dojo-type="dijit/TitlePane" data-dojo-props="title:'Rivers'">
+<div id="th20Legend" >
+</div>
+</div>
+<div style="position:absolute;top:5px;right:0px">
+<div class="MVlegendButton" data-dojo-type="dijit/form/Button" data-dojo-props="onClick:function(){mv_showTable('th20');},iconClass:'fa fa-th MVfa-but',showLabel:false">Attribute Table</div>
+
+</div>
+</div>
+<div id="MVth21Legend" class="MVlegC">
+<div id="th21Check" class="MVcheckBut" data-dojo-type="dijit/form/ToggleButton" data-dojo-props="checked:true, onClick:function(){ mv_changeLayerVis(this); },iconClass:'fa fa-eye fa-lg',showLabel:false"></div>
+<div class="MVleg" data-dojo-type="dijit/TitlePane" data-dojo-props="title:'County Boundary'">
+<div id="th21Legend" >
+</div>
+</div>
+<div style="position:absolute;top:5px;right:0px">
+<div class="MVlegendButton" data-dojo-type="dijit/form/Button" data-dojo-props="onClick:function(){mv_showTable('th21');},iconClass:'fa fa-th MVfa-but',showLabel:false">Attribute Table</div>
+
+</div>
+</div>
+<div id="MVLegSmartphone">
+</div>
+</div>
+</div>
+<div id="MVqueryFPContainer"></div>
+<div id="MVqueryContentContainer" style="display:none">
+<div id="MVqueryContent">
+<form name="MVqueryLayer" style="margin-top:10px;margin-right:3px;">
+<select data-dojo-type="dijit/form/Select" class="MVselect MVselLabel" style="width:100%;" data-dojo-props="name:'MVlistQueryLayer', onChange:function(){ mv_Query.layerSelect(this.value);}">
+<option disabled="disabled" value="" selected>Layer...</option>
+<option value="th0">N C Blackspot Points</option>
+<option value="th1">Nairobi Blackspot Points</option>
+<option value="th2">Northern Corridor Blackspots</option>
+<option value="th3">Nairobi High Risk Roads Blackspots</option>
+<option value="th4">Main Bridge</option>
+<option value="th5">Major Town</option>
+<option value="th6">Market Center</option>
+<option value="th7">Health Facilities by Level</option>
+<option value="th8">Weigh Bridge</option>
+<option value="th9">North Star Wellnes Center</option>
+<option value="th10">TOTAL Service Station</option>
+<option value="th11">Railway Station</option>
+<option value="th12">Public Primary School</option>
+<option value="th13">Other School (Secondary, ECDE & Private</option>
+<option value="th14">Police Station</option>
+<option value="th15">Proposed Road Side Station</option>
+<option value="th16">Northern Corridor</option>
+<option value="th17">Other Major Road</option>
+<option value="th18">Major Road</option>
+<option value="th20">Rivers</option>
+<option value="th21">County Boundary</option>
+</select>
+</form>
+<form name="MVquery" onsubmit="return mv_Query.doQuery(false);">
+<table class="query" style="width:100%">
+<tr class="query">
+<td class="query" style="width:33.33%">Fields</td>
+<td class="query" style="width:135px">Operators</td>
+<td class="query" style="width:*">Values</td>
+</tr>
+<tr class="query">
+<td class="query">
+<div id="MVqueryFields"></div>
+</td>
+<td class="query">
+<nobr>
+<span class="query0"><button data-dojo-type="dijit/form/Button" data-dojo-props="onClick:function(){ mv_Query.sqlOperator(' = '); }">=</button></span>
+<span class="query0"><button data-dojo-type="dijit/form/Button" data-dojo-props="onClick:function(){ mv_Query.sqlOperator(' <> '); }">&lt;&gt;</button></span>
+<span class="query0"><button data-dojo-type="dijit/form/Button" data-dojo-props="onClick:function(){ mv_Query.sqlOperator(' like '); }">like</button></span>
+</nobr><br>
+<nobr>
+<span class="query0"><button data-dojo-type="dijit/form/Button" data-dojo-props="onClick:function(){ mv_Query.sqlOperator(' > '); }">&gt;</button></span>
+<span class="query0"><button data-dojo-type="dijit/form/Button" data-dojo-props="onClick:function(){ mv_Query.sqlOperator(' >= '); }">&gt;=</button></span>
+<span class="query0"><button data-dojo-type="dijit/form/Button" data-dojo-props="onClick:function(){ mv_Query.sqlOperator(' and '); }">and</button></span>
+</nobr><br>
+<nobr>
+<span class="query0"><button data-dojo-type="dijit/form/Button" data-dojo-props="onClick:function(){ mv_Query.sqlOperator(' < '); }">&lt;</button></span>
+<span class="query0"><button data-dojo-type="dijit/form/Button" data-dojo-props="onClick:function(){ mv_Query.sqlOperator(' <= '); }">&lt;=</button></span>
+<span class="query0"><button data-dojo-type="dijit/form/Button" data-dojo-props="onClick:function(){ mv_Query.sqlOperator(' or '); }">or</button></span>
+</nobr><br>
+<nobr>
+<span class="query0"><button data-dojo-type="dijit/form/Button" data-dojo-props="onClick:function(){ mv_Query.sqlOperator(' ( '); }">(</button></span>
+<span class="query0"><button data-dojo-type="dijit/form/Button" data-dojo-props="onClick:function(){ mv_Query.sqlOperator(' ) '); }">)</button></span>
+<span class="query0"><button data-dojo-type="dijit/form/Button" data-dojo-props="onClick:function(){ mv_Query.sqlOperator(' % '); }">%</button></span>
+</nobr>
+</td>
+<td class="query">
+<div id="MVqueryValues"></div>
+</td>
+</tr>
+<tr class="query">
+<td colspan="3" class="query" style="vertical-align:bottom">&nbsp;<br />
+
+Query expression&nbsp;&nbsp;<a href="javascript:mv_Query.help();"><i class="fa fa-question MVfa-but"></i></a></td>
+</tr>
+<tr class="query">
+<td colspan="3" class="query">
+<input class="MVqInput" data-dojo-type="dijit/form/TextBox" data-dojo-props="name:'TextEingabe', onChange:function(){ mv_Query.test(); }, onClick:function(){ mv_Query.writeStatus(); }">
+<input type="hidden" name="SQLEingabe" value=""><br />&nbsp;<br />
+<nobr>
+<button data-dojo-type="dijit/form/Button" data-dojo-props="onClick:function(){ mv_Query.doQuery(true); }">Select and Zoom</button>
+<button data-dojo-type="dijit/form/Button" data-dojo-props="onClick:function(){ mv_Query.doQuery(false); }" >Select</button>
+<button data-dojo-type="dijit/form/Button" data-dojo-props="onClick:function(){ mv_Query.clear(); }" >Clear</button>
+</nobr>
+</td>
+</tr>
+</table>
+</form>
+</div>
+</div>
+</body>
+</html>
