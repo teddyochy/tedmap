@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--Author: Teddy Ochieng/Creator: MappetizerCore 13.0.3 by uismedia (http://www.uismedia.de);9/17/2017 2:14:20 PM-->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:mvns="http://www.mappetizer.de" xmlns:xlink="http://www.w3.org/1999/xlink" width="36" height="16">
+  <style type="text/css"><![CDATA[
+.normal { font-family:Verdana,Arial,Helvetica,sans-serif;font-size:8pt;pointer-events:none }
+.th17leg0aLEG { fill:none;stroke:black;stroke-width:3.4;stroke-linejoin:round;shape-rendering:optimizeSpeed }
+.th17leg0bLEG { fill:none;stroke:#267300;stroke-width:2.6;stroke-linejoin:round;shape-rendering:optimizeSpeed }
+]]></style>
+  <g id="legth17">
+    <line x1="2" y1="6" x2="26" y2="6" class="th17leg0aLEG" />
+    <line x1="2" y1="6" x2="26" y2="6" class="th17leg0bLEG" />
+  </g>
+</svg>
